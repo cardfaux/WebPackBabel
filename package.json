@@ -1,23 +1,30 @@
 {
-  "name": "webpackbabel",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/cardfaux/WebPackBabel.git"
-  },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/cardfaux/WebPackBabel/issues"
-  },
-  "homepage": "https://github.com/cardfaux/WebPackBabel#readme",
-  "devDependencies": {
-    "webpack": "^4.42.0",
-    "webpack-dev-server": "^3.10.3"
-  }
+	"name": "webpackbabel",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"start": "webpack-dev-server"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/cardfaux/WebPackBabel.git"
+	},
+	"author": "",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/cardfaux/WebPackBabel/issues"
+	},
+	"homepage": "https://github.com/cardfaux/WebPackBabel#readme",
+	"devDependencies": {
+		"webpack": "^4.42.0",
+		"webpack-cli": "^3.3.11",
+		"webpack-dev-server": "^3.10.3"
+	},
+	"dependencies": {
+		"react": "^16.13.0",
+		"react-dom": "^16.13.0",
+		"react-router-dom": "^5.1.2"
+	}
 }
