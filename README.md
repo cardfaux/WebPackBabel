@@ -29,3 +29,15 @@
 #### add babel to the webpack config
 
 #### add a .babelrc file so webpack knows how babel is configured
+
+#### run npm install --save-dev style-loader css-loader postcss-loader add it to webpack config
+
+#### post-css plugins with npm install --save-dev autoprefixer add it to webpack config and tweak package json browsersList
+
+#### npm install --save-dev url-loader to help load assets as urls add it to webpack config it depends on file-loader
+
+#### npm install --save-dev html-webpack-plugin to inject our code to the html file
+
+#### add webpack.config.prod.js and build script in package json
+
+#### for polyfills add npm install --save core-js regenerator-runtime and add it to .babelrc
