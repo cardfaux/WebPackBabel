@@ -7,7 +7,7 @@ module.exports = {
 	entry: './src/index.js',
 	output: {
 		path: path.resolve(__dirname, 'dist'),
-		filename: 'bundle.js',
+		filename: 'bundle.[contentHash].js',
 		publicPath: ''
 	},
 	devtool: 'cheap-module-eval-source-map',
@@ -49,9 +49,13 @@ module.exports = {
 					{ loader: 'sass-loader' } // Turns sass into css
 				]
 			},
+			// {
+			// 	test: /\.html$/,
+			// 	use: [{ loader: 'html-loader' }]
+			// },
 			{
-				test: /\.(png|jpe?g|gif)$/,
-				loader: 'url-loader?limit=8000&name=images/[name].[ext]'
+				test: /\.(svg|png|jpe?g|gif)$/,
+				loader: 'url-loader?limit=8000&name=images/[name].[hash].[ext]'
 			}
 		]
 	},

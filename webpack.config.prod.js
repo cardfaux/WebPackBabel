@@ -1,13 +1,14 @@
 const path = require('path');
 const autoprefixer = require('autoprefixer');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const CleanWebpackPlugin = require('clean-webpack-plugin');
 
 module.exports = {
 	mode: 'production',
 	entry: './src/index.js',
 	output: {
 		path: path.resolve(__dirname, 'dist'),
-		filename: 'bundle.js',
+		filename: 'bundle.[contentHash].js',
 		publicPath: ''
 	},
 	devtool: 'none',
@@ -49,9 +50,15 @@ module.exports = {
 					{ loader: 'sass-loader' } // Turns sass into css
 				]
 			},
+			// {
+			// 	test: /\.html$/,
+			// 	use: [
+			// 		{loader: 'html-loader'}
+			// 	]
+			// },
 			{
-				test: /\.(png|jpe?g|gif)$/,
-				loader: 'url-loader?limit=8000&name=images/[name].[ext]'
+				test: /\.(svg|png|jpe?g|gif)$/,
+				loader: 'url-loader?limit=8000&name=images/[name].[hash].[ext]'
 			}
 		]
 	},
@@ -60,6 +67,7 @@ module.exports = {
 			template: __dirname + '/src/index.html',
 			filename: 'index.html',
 			inject: 'body'
-		})
+		}),
+		new CleanWebpackPlugin()
 	]
 };

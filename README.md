@@ -43,3 +43,7 @@
 #### for polyfills add npm install --save core-js regenerator-runtime and add it to .babelrc
 
 #### add scss with sass-loader node-sass
+
+#### Cache Busting, Everytime Files Change Dont Use The Cache with contentHash HtmlWebPackPlugin
+
+#### add clean-webpack-plugin to the webpack prod config
