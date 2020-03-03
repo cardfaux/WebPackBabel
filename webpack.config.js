@@ -42,6 +42,14 @@ module.exports = {
 				]
 			},
 			{
+				test: /\.scss$/,
+				use: [
+					{ loader: 'style-loader' }, // Inject styles into DOM
+					{ loader: 'css-loader' }, // Turns css into commonjs
+					{ loader: 'sass-loader' } // Turns sass into css
+				]
+			},
+			{
 				test: /\.(png|jpe?g|gif)$/,
 				loader: 'url-loader?limit=8000&name=images/[name].[ext]'
 			}

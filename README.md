@@ -41,3 +41,5 @@
 #### add webpack.config.prod.js and build script in package json
 
 #### for polyfills add npm install --save core-js regenerator-runtime and add it to .babelrc
+
+#### add scss with sass-loader node-sass
